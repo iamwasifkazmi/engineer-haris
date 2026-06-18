@@ -7,8 +7,10 @@ export const personalInfo = {
   location: "Islamabad, Pakistan",
   linkedin: "https://www.linkedin.com/in/hariskhan",
   yearsExperience: 7,
+  credential: "Registered Software Engineer · Washington Accord",
+  availability: "Open to collaborations & new opportunities",
   tagline:
-    "Building elegant, high-performance web & mobile experiences across the full stack.",
+    "I write code that ships — from Figma mockups to production apps across web, iOS, and Android.",
 };
 
 export const about = {

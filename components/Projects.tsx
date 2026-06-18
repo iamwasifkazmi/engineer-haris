@@ -9,14 +9,14 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="section-padding"
+      className="section-padding section-alt"
       aria-labelledby="projects-heading"
     >
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
           label="Portfolio"
-          title="Selected Projects"
-          description="Industrial and client projects spanning web, mobile, and enterprise systems."
+          title="Work That Went Live"
+          description="Products I've helped design, build, and ship for clients and companies."
         />
 
         <h2 id="projects-heading" className="sr-only">
@@ -25,9 +25,16 @@ export default function Projects() {
 
         <div className="grid gap-6 md:grid-cols-2">
           {featured.map((project, i) => (
-            <ScrollReveal key={project.name} delay={i * 80}>
-              <article className="project-card group">
+            <ScrollReveal
+              key={project.name}
+              variant={i % 2 === 0 ? "up" : "scale"}
+              delay={i * 80}
+            >
+              <article className="project-card card-shine group">
                 <div className="project-card-glow" aria-hidden="true" />
+                <span className="project-number" aria-hidden="true">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
                 <h3 className="font-display text-xl font-semibold text-cream">
                   {project.name}
                 </h3>
@@ -46,10 +53,12 @@ export default function Projects() {
                     href={project.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-5 inline-flex items-center gap-1 text-sm font-medium text-gold transition-colors group-hover:gap-2"
+                    className="project-link mt-5 inline-flex items-center gap-1 text-sm font-medium text-gold"
                   >
                     Visit Project
-                    <span aria-hidden="true">→</span>
+                    <span className="project-link-arrow" aria-hidden="true">
+                      →
+                    </span>
                   </a>
                 )}
               </article>
@@ -58,16 +67,16 @@ export default function Projects() {
         </div>
 
         {others.length > 0 && (
-          <div className="mt-12">
-            <ScrollReveal>
-              <h3 className="mb-6 text-center font-display text-2xl text-cream">
-                More Projects
+          <div className="mt-14">
+            <ScrollReveal variant="fade">
+              <h3 className="mb-8 text-center font-display text-2xl text-cream">
+                More Along the Way
               </h3>
             </ScrollReveal>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {others.map((project, i) => (
-                <ScrollReveal key={project.name} delay={i * 60}>
-                  <article className="project-card-sm">
+                <ScrollReveal key={project.name} variant="up" delay={i * 50}>
+                  <article className="project-card-sm card-shine">
                     <h4 className="font-medium text-cream">{project.name}</h4>
                     <p className="mt-2 text-xs leading-relaxed text-subtle">
                       {project.description}

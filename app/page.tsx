@@ -7,6 +7,7 @@ import Hero from "@/components/Hero";
 import Navigation from "@/components/Navigation";
 import ParallaxBackground from "@/components/ParallaxBackground";
 import Projects from "@/components/Projects";
+import SectionDivider from "@/components/SectionDivider";
 import Skills from "@/components/Skills";
 
 export default function Home() {
@@ -16,11 +17,17 @@ export default function Home() {
       <Navigation />
       <main>
         <Hero />
+        <SectionDivider />
         <About />
+        <SectionDivider />
         <Skills />
+        <SectionDivider />
         <Experience />
+        <SectionDivider />
         <Projects />
+        <SectionDivider />
         <Education />
+        <SectionDivider />
         <Contact />
       </main>
       <Footer />

@@ -1,12 +1,13 @@
 import { about, personalInfo } from "@/lib/data";
+import CountUp from "./CountUp";
 import ScrollReveal from "./ScrollReveal";
 import SectionHeading from "./SectionHeading";
 
 const stats = [
-  { value: `${personalInfo.yearsExperience}+`, label: "Years Experience" },
-  { value: "15+", label: "Projects Delivered" },
-  { value: "4+", label: "Companies Served" },
-  { value: "3", label: "Platforms (Web, iOS, Android)" },
+  { value: personalInfo.yearsExperience, suffix: "+", label: "Years in the field" },
+  { value: 15, suffix: "+", label: "Projects shipped" },
+  { value: 4, suffix: "+", label: "Teams & companies" },
+  { value: 3, suffix: "", label: "Platforms mastered" },
 ];
 
 export default function About() {
@@ -19,29 +20,36 @@ export default function About() {
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
           label="About Me"
-          title="Crafting Digital Experiences"
+          title="The Person Behind the Code"
           description={personalInfo.tagline}
         />
 
-        <div className="grid items-center gap-12 lg:grid-cols-2">
-          <ScrollReveal>
-            <div className="space-y-5 text-base leading-relaxed text-muted">
-              {about.paragraphs.map((p) => (
-                <p key={p.slice(0, 40)}>{p}</p>
+        <div className="grid items-start gap-12 lg:grid-cols-[1.2fr_0.8fr]">
+          <ScrollReveal variant="left">
+            <div className="about-prose space-y-6 text-base leading-[1.85] text-muted">
+              {about.paragraphs.map((p, i) => (
+                <p
+                  key={p.slice(0, 40)}
+                  className={i === 0 ? "about-lead text-lg text-cream/90" : ""}
+                >
+                  {p}
+                </p>
               ))}
             </div>
           </ScrollReveal>
 
-          <ScrollReveal delay={150}>
+          <ScrollReveal variant="right" delay={120}>
             <div className="grid grid-cols-2 gap-4">
-              {stats.map((stat) => (
-                <div key={stat.label} className="stat-card">
+              {stats.map((stat, i) => (
+                <div
+                  key={stat.label}
+                  className="stat-card"
+                  style={{ animationDelay: `${i * 80}ms` }}
+                >
                   <span className="font-display text-3xl font-bold text-gold sm:text-4xl">
-                    {stat.value}
+                    <CountUp end={stat.value} suffix={stat.suffix} />
                   </span>
-                  <span className="mt-1 text-sm text-subtle">
-                    {stat.label}
-                  </span>
+                  <span className="mt-2 text-sm text-subtle">{stat.label}</span>
                 </div>
               ))}
             </div>

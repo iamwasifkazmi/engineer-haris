@@ -32,10 +32,11 @@ export default function ParallaxBackground() {
       className="parallax-bg pointer-events-none fixed inset-0 -z-10 overflow-hidden"
       aria-hidden="true"
     >
-      <div className="orb orb-1" />
-      <div className="orb orb-2" />
-      <div className="orb orb-3" />
+      <div className="orb orb-1 orb-float" />
+      <div className="orb orb-2 orb-float-delayed" />
+      <div className="orb orb-3 orb-float-slow" />
       <div className="grid-overlay" />
+      <div className="grain-overlay" />
     </div>
   );
 }
