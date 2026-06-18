@@ -71,7 +71,7 @@ export function getProjectsJsonLd() {
 
 export const siteMetadata = {
   title: `${personalInfo.name} | ${personalInfo.title}`,
-  description: `${personalInfo.name} — ${personalInfo.title} with ${personalInfo.yearsExperience}+ years of experience in MERN Stack, React Native, NestJS, Swift, and Kotlin. Based in ${personalInfo.location}.`,
+  description: `${personalInfo.name} — ${personalInfo.title} with ${personalInfo.yearsExperience}+ years of experience in MERN Stack, React Native, NestJS, Swift, Kotlin, Google Play Console, and App Store publishing. Based in ${personalInfo.location}.`,
   keywords: [
     ...allSkills,
     personalInfo.name,
@@ -82,6 +82,10 @@ export const siteMetadata = {
     "NestJS Developer",
     "Swift Developer",
     "Kotlin Developer",
+    "Google Play Console Expert",
+    "App Store Connect",
+    "iOS App Publishing",
+    "Android App Publishing",
     "Islamabad Developer",
   ],
   siteUrl,

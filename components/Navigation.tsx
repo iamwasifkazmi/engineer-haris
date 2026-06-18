@@ -26,60 +26,62 @@ export default function Navigation() {
   return (
     <>
       <header
-        className={`site-header fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled || menuOpen ? "nav-scrolled py-3" : "bg-transparent py-4"
+        className={`site-header fixed top-0 left-0 right-0 z-50 ${
+          scrolled || menuOpen ? "header-scrolled" : ""
         }`}
       >
-        <nav
-          className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 sm:px-6"
-          aria-label="Main navigation"
-        >
-          <a
-            href="#"
-            className="shrink-0 font-display text-xl font-semibold tracking-tight text-cream"
+        <div className="header-bar">
+          <nav
+            className="header-inner"
+            aria-label="Main navigation"
           >
-            HK<span className="text-gold">.</span>
-          </a>
-
-          <ul className="hidden items-center gap-8 md:flex">
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <a href={link.href} className="nav-link">
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-
-          <div className="nav-actions">
-            <div className="hidden md:block">
-              <ThemeToggle />
-            </div>
-
-            <a
-              href={`mailto:${personalInfo.email}`}
-              className="hidden rounded-full border border-gold/30 bg-gold/10 px-5 py-2 text-sm font-medium text-gold transition-all hover:border-gold/60 hover:bg-gold/20 md:inline-flex"
-            >
-              Get in Touch
+            <a href="#" className="header-brand">
+              <span className="header-brand-mark">
+                HK<span className="text-gold">.</span>
+              </span>
+              <span className="header-brand-name">{personalInfo.name}</span>
             </a>
 
-            <button
-              type="button"
-              className="menu-toggle md:hidden"
-              onClick={() => setMenuOpen(!menuOpen)}
-              aria-label={menuOpen ? "Close menu" : "Open menu"}
-              aria-expanded={menuOpen}
-              aria-controls="mobile-menu"
-            >
-              <span className={`hamburger ${menuOpen ? "open" : ""}`} />
-            </button>
-          </div>
-        </nav>
+            <ul className="header-nav">
+              {navLinks.map((link) => (
+                <li key={link.href}>
+                  <a href={link.href} className="header-nav-link">
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+
+            <div className="header-actions">
+              <div className="header-theme">
+                <ThemeToggle />
+              </div>
+
+              <a
+                href={`mailto:${personalInfo.email}`}
+                className="header-cta"
+              >
+                Get in Touch
+              </a>
+
+              <button
+                type="button"
+                className="menu-toggle"
+                onClick={() => setMenuOpen(!menuOpen)}
+                aria-label={menuOpen ? "Close menu" : "Open menu"}
+                aria-expanded={menuOpen}
+                aria-controls="mobile-menu"
+              >
+                <span className={`hamburger ${menuOpen ? "open" : ""}`} />
+              </button>
+            </div>
+          </nav>
+        </div>
       </header>
 
       <div
         id="mobile-menu"
-        className={`mobile-menu-overlay md:hidden ${menuOpen ? "open" : ""}`}
+        className={`mobile-menu-overlay ${menuOpen ? "open" : ""}`}
         aria-hidden={!menuOpen}
         onClick={closeMenu}
       >

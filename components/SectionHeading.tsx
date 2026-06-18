@@ -12,7 +12,7 @@ export default function SectionHeading({
   description,
 }: SectionHeadingProps) {
   return (
-    <ScrollReveal variant="up" className="mb-14 text-center">
+    <ScrollReveal variant="up" className="mb-9 text-center">
       <p className="section-label mb-4 text-sm font-medium uppercase tracking-[0.28em] text-gold">
         {label}
       </p>

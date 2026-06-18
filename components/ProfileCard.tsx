@@ -17,7 +17,7 @@ export default function ProfileCard() {
 
         <div className="profile-status">
           <span className="profile-status-dot" aria-hidden="true" />
-          <span>Building at MakTek AI</span>
+          <span>Building at Humai.ae</span>
         </div>
 
         <ul className="profile-meta" role="list">

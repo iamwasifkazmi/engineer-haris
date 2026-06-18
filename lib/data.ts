@@ -1,23 +1,23 @@
 export const personalInfo = {
   name: "Engr Haris Khan",
   title: "Full Stack Software Engineer",
-  subtitle: "MERN Stack · React Native · NestJS · Swift · Kotlin",
+  subtitle: "MERN Stack · React Native · NestJS · Swift · Kotlin · App Store & Play Store",
   email: "haris.softwareengineer@gmail.com",
   phone: "+92 344 0110318",
   location: "Islamabad, Pakistan",
-  linkedin: "https://www.linkedin.com/in/hariskhan",
+  linkedin: "https://pk.linkedin.com/in/haris-khan-1b0b681a8",
   yearsExperience: 7,
   credential: "Registered Software Engineer · Washington Accord",
   availability: "Open to collaborations & new opportunities",
   tagline:
-    "I write code that ships — from Figma mockups to production apps across web, iOS, and Android.",
+    "I write code that ships — from Figma mockups to live apps on the web, Google Play, and the Apple App Store.",
 };
 
 export const about = {
   paragraphs: [
     "I am a registered software engineer with over 7 years of professional experience delivering production-grade applications for startups and global enterprises alike. From MERN and React Native to NestJS, Swift, and Kotlin — I bring a versatile toolkit to every challenge.",
-    "I specialize in translating Figma designs into pixel-perfect, responsive interfaces, architecting scalable backends, and leading teams to ship on time. Whether it's a cross-platform mobile app, a real-time web platform, or an enterprise management system — I focus on clean code, performance, and user experience.",
-    "Currently serving as Full Stack Developer & Team Lead at MakTek AI, I oversee end-to-end project delivery while mentoring developers and driving technical excellence across the stack.",
+    "I specialize in translating Figma designs into pixel-perfect, responsive interfaces, architecting scalable backends, and leading teams to ship on time. From build to release, I'm experienced publishing apps to Google Play Console and Apple App Store Connect — handling signing, metadata, review submissions, and store compliance.",
+    "Currently serving as Full Stack Software Engineer at Humai.ae, I build and ship AI-powered web and mobile products while collaborating with cross-functional teams across the stack.",
   ],
 };
 
@@ -58,6 +58,10 @@ export const skillCategories = [
       "iOS",
       "Android",
       "Cross-platform Apps",
+      "Google Play Console",
+      "App Store Connect",
+      "App Store Publishing",
+      "Play Store Deployment",
     ],
   },
   {
@@ -82,16 +86,32 @@ export const allSkills = skillCategories.flatMap((c) => c.skills);
 
 export const experience = [
   {
-    company: "MakTek AI",
-    role: "Full Stack Developer & Team Lead",
-    period: "Dec 2023 — Present",
+    company: "Humai.ae",
+    role: "Full Stack Software Engineer",
+    period: "Jan 2025 — Present",
     location: "Remote",
     highlights: [
-      "Lead MERN stack development with React, Next.js, Node.js, and Express.js for dynamic web applications.",
-      "Build cross-platform mobile apps for iOS and Android using React Native, Swift, and Kotlin.",
-      "Convert Figma designs into responsive, production-ready code for web and mobile.",
-      "Lead a development team, coordinating delivery timelines and mentoring junior engineers.",
-      "Architect NestJS microservices and real-time features with Socket.io.",
+      "Develop full-stack web applications with React, Next.js, Node.js, and NestJS for AI-driven products.",
+      "Built Huscribe — a voice-first sales AI platform with CRM integrations, WhatsApp workflows, and real-time deal intelligence.",
+      "Build and maintain cross-platform mobile experiences using React Native, Swift, and Kotlin.",
+      "Expert in end-to-end app store releases — uploading, signing, and publishing to Google Play Console and Apple App Store.",
+      "Translate Figma designs into responsive, production-ready interfaces for web and mobile.",
+      "Collaborate with product and engineering teams to deliver features on schedule with high code quality.",
+      "Integrate APIs, optimize performance, and implement scalable backend services.",
+    ],
+  },
+  {
+    company: "MakTek AI",
+    role: "Full Stack Developer & Team Lead",
+    period: "Dec 2023 — Jan 2025",
+    location: "Remote",
+    highlights: [
+      "Led MERN stack development with React, Next.js, Node.js, and Express.js for dynamic web applications.",
+      "Built cross-platform mobile apps for iOS and Android using React Native, Swift, and Kotlin.",
+      "Managed app releases on Google Play Console and Apple App Store — from build submission to production rollout.",
+      "Converted Figma designs into responsive, production-ready code for web and mobile.",
+      "Led a development team, coordinating delivery timelines and mentoring junior engineers.",
+      "Architected NestJS microservices and real-time features with Socket.io.",
     ],
   },
   {
@@ -130,6 +150,30 @@ export const experience = [
 ];
 
 export const projects = [
+  {
+    name: "Huscribe",
+    description:
+      "Voice AI sales platform built at Humai.ae — captures deal context across calls, email, and WhatsApp, updates CRMs automatically, and gives sales teams intelligence reports on pipeline health.",
+    tech: ["Next.js", "React", "NestJS", "TypeScript", "WhatsApp API"],
+    url: "https://huscribe.com/",
+    featured: true,
+  },
+  {
+    name: "Fatoorty",
+    description:
+      "Restaurant operating system by GLABS — QR ordering, multi-branch management, analytics, and a full portal for Egyptian restaurants to run daily operations.",
+    tech: ["Next.js", "React", "NestJS", "TypeScript", "QR Ordering"],
+    url: "https://fatoorty.app/home",
+    featured: true,
+  },
+  {
+    name: "D&SH Limited",
+    description:
+      "Professional home and commercial improvement services website for a UK-based company — showcasing interior design, carpet fittings, painting, deep cleaning, and quote-driven lead generation.",
+    tech: ["Next.js", "React", "Tailwind CSS", "Responsive Design"],
+    url: "https://www.dshlimited.uk/",
+    featured: true,
+  },
   {
     name: "MakTek AI Website",
     description:
@@ -245,9 +289,9 @@ export const education = [
 
 export const navLinks = [
   { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
+  { label: "Experience", href: "#experience" },
+  { label: "Skills", href: "#skills" },
   { label: "Education", href: "#education" },
   { label: "Contact", href: "#contact" },
 ];

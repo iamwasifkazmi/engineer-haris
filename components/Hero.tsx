@@ -10,7 +10,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="hero-section relative flex min-h-screen items-center px-4 pt-28 pb-16 sm:px-6"
+      className="hero-section relative flex min-h-[90vh] items-center px-4 pt-24 pb-10 sm:px-6"
       aria-labelledby="hero-heading"
     >
       <div className="mx-auto grid w-full max-w-6xl items-center gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
@@ -78,11 +78,6 @@ export default function Hero() {
         <HeroIntro delay={500} className="mx-auto w-full max-w-sm lg:max-w-none">
           <ProfileCard />
         </HeroIntro>
-      </div>
-
-      <div className="hero-scroll absolute bottom-8 left-1/2 hidden -translate-x-1/2 items-center gap-2 text-subtle sm:flex">
-        <span className="text-xs uppercase tracking-[0.3em]">Scroll</span>
-        <div className="scroll-indicator" />
       </div>
     </section>
   );
