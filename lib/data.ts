@@ -175,11 +175,27 @@ export const projects = [
     featured: true,
   },
   {
+    name: "Oldham Snooker Lounge",
+    description:
+      "Online table booking platform for a UK snooker lounge — lets customers choose a space, pick a time, and confirm reservations with booking references.",
+    tech: ["Next.js", "React", "NestJS", "Online Booking", "POS Integration"],
+    url: "https://pos.oldhamsnookerlounge.com/book",
+    featured: true,
+  },
+  {
     name: "MakTek AI Website",
     description:
       "Corporate AI platform website built with Next.js, featuring modern design and optimized performance.",
     tech: ["Next.js", "React", "Tailwind CSS"],
     url: "https://maktek.ai/",
+    featured: true,
+  },
+  {
+    name: "CH Properties Investment",
+    description:
+      "Property investment platform showcasing real estate opportunities, lead capture, and a polished brand presence for CH Properties Investment.",
+    tech: ["Next.js", "React", "Tailwind CSS", "Property Listings"],
+    url: "https://chpropertiesinvestment.com/",
     featured: true,
   },
   {
@@ -271,6 +287,13 @@ export const projects = [
     featured: false,
   },
 ];
+
+export const portfolioStats = {
+  projectsDelivered: 20,
+  liveProducts: projects.filter((p) => p.url).length,
+  teamsAndCompanies: 5,
+  platformsMastered: 3,
+};
 
 export const education = [
   {

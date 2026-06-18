@@ -1,13 +1,29 @@
-import { about, personalInfo } from "@/lib/data";
+import { about, personalInfo, portfolioStats } from "@/lib/data";
 import CountUp from "./CountUp";
 import ScrollReveal from "./ScrollReveal";
 import SectionHeading from "./SectionHeading";
 
 const stats = [
-  { value: personalInfo.yearsExperience, suffix: "+", label: "Years in the field" },
-  { value: 15, suffix: "+", label: "Projects shipped" },
-  { value: 4, suffix: "+", label: "Teams & companies" },
-  { value: 3, suffix: "", label: "Platforms mastered" },
+  {
+    value: personalInfo.yearsExperience,
+    suffix: "+",
+    label: "Years in the field",
+  },
+  {
+    value: portfolioStats.projectsDelivered,
+    suffix: "+",
+    label: "Projects delivered",
+  },
+  {
+    value: portfolioStats.liveProducts,
+    suffix: "+",
+    label: "Live products",
+  },
+  {
+    value: portfolioStats.teamsAndCompanies,
+    suffix: "+",
+    label: "Teams & companies",
+  },
 ];
 
 export default function About() {
